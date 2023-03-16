@@ -1,0 +1,145 @@
+body {
+  background-color: #c7c7c7;
+}
+
+.background-squares {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.square {
+  position: absolute;
+  background-color: rgba(200, 200, 00, 0.5);
+  width: 20px;
+  height: 20px;
+  animation: move 3s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50px, -50px);
+  }
+  50% {
+    transform: translate(100px, 0);
+  }
+  75% {
+    transform: translate(50px, 50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.square:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  top: 10%;
+  left: 10%;
+}
+
+.square:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  top: 30%;
+  left: 40%;
+}
+
+.square:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  top: 60%;
+  left: 70%;
+}
+
+.square:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  top: 80%;
+  left: 20%;
+}
+
+@keyframes square-bounce {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(0) translateX(200%);
+  }
+  50% {
+    transform: translateY(200%) translateX(200%);
+  }
+  75% {
+    transform: translateY(200%) translateX(0);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c7c7c7;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#website-title {
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
+  text-decoration: none;
+  color: #ec5555;
+}
+
+.short-description {
+  text-align: center;
+  font-size: 1.2em;
+  color: #444;
+}
+
+.main-content {
+  display: flex;
+}
+
+aside {
+  width: 25%;
+  padding-right: 20px;
+}
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-list li {
+  margin-bottom: 10px;
+}
+
+.project-list a {
+  color: #cc2e2e;
+  text-decoration: none;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
+
+.project-description {
+  flex-grow: 1;
+  background-color: #c7c7c7;
+  padding: 20px;
+  color: #444;
+}
